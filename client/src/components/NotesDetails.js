@@ -1,6 +1,5 @@
 import { useNotesContext } from "../hooks/useNotesContext";
-//datefns
-// import formatDistanceToNow from 'date-fns/formatDistanceToNow'
+
 
 const NotesDetails = ({ note }) => {
   const { dispatch } = useNotesContext();
@@ -17,12 +16,14 @@ const NotesDetails = ({ note }) => {
     }
   };
 
+
   return (
     <div className="notes-details">
       <h4>{note.title}</h4>
       <p>
         Deadline : <strong>{note.deadline}</strong>
       </p>
+      
       <p>
         Task created at : <strong>{note.createdAt}</strong>
       </p>
