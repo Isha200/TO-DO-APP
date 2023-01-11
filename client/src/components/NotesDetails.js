@@ -1,5 +1,5 @@
 import { useNotesContext } from "../hooks/useNotesContext";
-
+import moment from 'moment'
 
 const NotesDetails = ({ note }) => {
   const { dispatch } = useNotesContext();
@@ -25,7 +25,7 @@ const NotesDetails = ({ note }) => {
       </p>
       
       <p>
-        Task created at : <strong>{note.createdAt}</strong>
+        Task created at : <strong>{moment(note.createdAt).format("DD/MM/YYYY")}</strong>
       </p>
 
       <span className="material-symbols-outlined" onClick={handleClick} >DELETE</span>
